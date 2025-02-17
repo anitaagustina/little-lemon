@@ -1,0 +1,22 @@
+.logo {
+    padding: 10px;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    float: right;
+}
+.menu li {
+    padding: 10px 20px;
+    position: relative;
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    background-color: beige;
+    padding: 10px;
+}
