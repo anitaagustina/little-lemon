@@ -1,6 +1,7 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Nav from "./components/Nav";
+import Navigation from "./components/Navigation";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
@@ -8,8 +9,12 @@ function App() {
   return (
     <>
     <Header/>
-    <Nav/>
-    <Main/>
+    <Router>
+      <Navigation/>
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </Router>
     <Footer/>
     </>
   );

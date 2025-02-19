@@ -1,20 +1,107 @@
 .logo {
     padding: 10px;
 }
+.navigation-menu {
+    display: flex;
+    justify-content: space-between;
+}
 .menu {
     list-style: none;
     display: flex;
     padding: 0;
-    float: right;
 }
 .menu li {
     padding: 10px 20px;
-    position: relative;
-}
 
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+.banner {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #495E57;
+    color: white;
+}
+.banner-left{
+    padding: 10%;
+}
+.banner-right {
+    padding-top: 5%;
+    padding-right: 8%;
+
+}
+.main-btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.main-btn:hover {
+    background-color: rgb(247, 247, 24);
+    color: black;
+}
+.specials-gallery {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.specials-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+.menu-gallery {
+    border: 1px solid black;
+    margin: 1%;
+    padding-bottom: 1%;
+
+}
+.menu-gallery p, .menu-gallery > button {
+    padding: 2%;
+
+}
+.right-content {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.menu-gallery img {
+    width: 100%;
+    height: auto;
+}
+.main-testimonials {
+    background-color: #495E57;
+    padding: 2%;
+
+}
+.main-testimonials > p {
+    color: white;
+    font-size: large;
+    font-weight: 800;
+}
+.testimonials {
+    display: flex;
+    justify-content: space-evenly;
+    height: fit-content;
+    background-color: #495E57;
+}
+.testimonials-single {
+    border: 1px solid black;
+    padding: 2%;
+    width: auto;
+    margin: 1%;
+    color: black;
+    background-color: white;
+}
 .footer {
     bottom: 0;
-    position: fixed;
+    position: relative;
     text-align: center;
     width: 100%;
     background-color: beige;
