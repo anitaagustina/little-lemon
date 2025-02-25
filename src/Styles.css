@@ -41,6 +41,10 @@
     color: white;
     cursor: pointer;
 }
+.main-btn:link {
+    background-color: black;
+    color: white;
+}
 .main-btn:hover {
     background-color: rgb(247, 247, 24);
     color: black;
@@ -98,6 +102,21 @@
     margin: 1%;
     color: black;
     background-color: white;
+}
+.table-reservations {
+    margin: 2%;
+    font-weight: 600;
+}
+.form-reserve {
+    display: grid;
+    max-width: 200px;
+    gap: 20px;
+    padding: 2%;
+    border: 1px solid black;
+
+}
+.confirmation-page {
+    padding: 2%;
 }
 .footer {
     bottom: 0;

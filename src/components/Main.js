@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Banner from "../banner.jpg";
 import Specials from "../specials-1.jpg";
 import Avatar from "../avatar.png";
@@ -8,12 +9,12 @@ function Main() {
     return (
     <>
     <div className="container">
-        <section className="banner">
+    <section className="banner">
             <div className="banner-left">
                 <h1>Little Lemon</h1>
                 <p>Chicago</p>
                 <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                <button className="main-btn">Reserve a table</button>
+                <button className="main-btn"><Link to="/reservations">Reserve a table</Link></button>
             </div>
             <div className="banner-right">
                 <img src={Banner} width="200" alt="Banner Little Lemon"/>

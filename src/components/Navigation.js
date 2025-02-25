@@ -10,11 +10,11 @@ function Navigation() {
             <img src={Logo} className="logo" alt="Little Lemon Logo" width="200"/>
             <ul className="menu">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/menu">Menu</Link></li>
+                <li><Link to="/">About</Link></li>
+                <li><Link to="/">Menu</Link></li>
                 <li><Link to="/reservations">Reservations</Link></li>
-                <li><Link to="/orderonline">Order Online</Link></li>
-                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/">Order Online</Link></li>
+                <li><Link to="/">Login</Link></li>
             </ul>
         </nav>
         </>
