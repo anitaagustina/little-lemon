@@ -57,61 +57,79 @@ function BookingForm({ availableTimes, dispatch, reservations, onReserve, submit
   };
 
   return (
-    <section className="table-reservations">
-      <h3>Reserve a Table</h3>
-      <form className="form-reserve" onSubmit={handleSubmit}>
-        <label htmlFor="res-date">Choose Date</label>
-        <input
-          type="date"
-          id="res-date"
-          value={chosenDate}
-          onChange={handleDateChange}
-          required
-        />
+    <section className="table-reservations" aria-labelledby="reservation-heading">
+      <h3 id="reservation-heading">Reserve a Table</h3>
+      <form className="form-reserve" onSubmit={handleSubmit} aria-live="polite">
 
-        <label htmlFor="res-time">Choose Time</label>
-        <select
-          id="res-time"
-          value={selectedTime}
-          onChange={(e) => setSelectedTime(e.target.value)}
-          required
+
+          {/* Date Input */}
+          <label htmlFor="res-date">Choose Date</label>
+          <input
+            type="date"
+            id="res-date"
+            value={chosenDate}
+            onChange={handleDateChange}
+            required
+            aria-label="Reservation Date"
+          />
+
+          {/* Time Select */}
+          <label htmlFor="res-time">Choose Time</label>
+          <select
+            id="res-time"
+            value={selectedTime}
+            onChange={(e) => setSelectedTime(e.target.value)}
+            required
+            aria-label="Select a time for your reservation"
+          >
+            <option value="">Select Time</option>
+            {availableTimes.map((time, index) => (
+              <option
+                key={index}
+                value={time}
+                disabled={isTimeReserved(chosenDate, time)}
+                aria-label={isTimeReserved(chosenDate, time) ? `${time} Reserved` : `${time} Available`}
+              >
+                {time} {isTimeReserved(chosenDate, time) ? "- Reserved" : ""}
+              </option>
+            ))}
+          </select>
+
+          {/* Guest Number Input */}
+          <label htmlFor="guests">Number of Guests</label>
+          <input
+            type="number"
+            id="guests"
+            min="1"
+            max="10"
+            value={numberGuest}
+            onChange={(e) => setNumberGuest(e.target.value)}
+            required
+            aria-label="Number of guests"
+          />
+
+          {/* Occasion Select */}
+          <label htmlFor="occasion">Occasion</label>
+          <select
+            id="occasion"
+            value={occasion}
+            onChange={(e) => setOccasion(e.target.value)}
+            required
+            aria-label="Occasion for reservation"
+          >
+            <option value="">Select Occasion</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
+          </select>
+        
+
+        {/* Submit Button */}
+        <button
+          className="main-btn"
+          type="submit"
+          disabled={!getIsFormValid()}
+          aria-label="Submit reservation"
         >
-          <option value="">Select Time</option>
-          {availableTimes.map((time, index) => (
-            <option
-              key={index}
-              value={time}
-              disabled={isTimeReserved(chosenDate, time)}
-            >
-              {time} {isTimeReserved(chosenDate, time) ? " - Reserved" : ""}
-            </option>
-          ))}
-        </select>
-
-        <label htmlFor="guests">Number of Guests</label>
-        <input
-          type="number"
-          id="guests"
-          min="1"
-          max="10"
-          value={numberGuest}
-          onChange={(e) => setNumberGuest(e.target.value)}
-          required
-        />
-
-        <label htmlFor="occasion">Occasion</label>
-        <select
-          id="occasion"
-          value={occasion}
-          onChange={(e) => setOccasion(e.target.value)}
-          required
-        >
-          <option value="">Select Occasion</option>
-          <option value="Birthday">Birthday</option>
-          <option value="Anniversary">Anniversary</option>
-        </select>
-
-        <button className="main-btn" type="submit" disabled={!getIsFormValid()}>
           Make Your Reservation
         </button>
       </form>

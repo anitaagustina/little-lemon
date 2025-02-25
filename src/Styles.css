@@ -108,16 +108,35 @@
     font-weight: 600;
 }
 .form-reserve {
-    display: grid;
-    max-width: 200px;
-    gap: 20px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
     padding: 2%;
     border: 1px solid black;
 
 }
+
+.form-reserve label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-reserve input,
+  .form-reserve select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
 .confirmation-page {
     padding: 2%;
 }
+.error-message {
+    color: red;
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+
+
 .footer {
     bottom: 0;
     position: relative;
