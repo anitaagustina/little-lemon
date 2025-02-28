@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import Banner from "../banner.jpg";
 import Specials from "../specials-1.jpg";
 import Avatar from "../avatar.png";
+import Brothers from "../brothers.jpg";
 import "../Styles.css";
 
 function Main() {
     return (
     <>
     <div className="container">
-    <section className="banner">
+        <section className="banner">
             <div className="banner-left">
                 <h1>Little Lemon</h1>
                 <p>Chicago</p>
@@ -80,6 +81,18 @@ function Main() {
                 </section>
             </section>
         </section>
+        <section className="about">
+
+            <div className="banner-left">
+                <h1>About Little Lemon</h1>
+                <p>Adam & Garry</p>
+                <p>We want to cherish our culture by creating Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+            </div>
+            <div className="banner-right">
+                <img src={Brothers} width="500" alt="Banner Little Lemon"/>
+            </div>
+        </section>
+
     </div>
     </>
 );

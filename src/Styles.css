@@ -27,13 +27,14 @@
     flex-flow: row wrap;
     width: 100%;
 }
-.banner {
+.banner, .about {
     display: flex;
     justify-content: space-around;
     width: 100%;
     background-color: #495E57;
     color: white;
 }
+
 .banner-left{
     padding: 10%;
 }
@@ -174,13 +175,36 @@
     font-size: 0.9rem;
   }
 
-
+.about {
+    background-color: white;
+    color: black;
+}
+.long-footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightgrey;
+    color: black;
+    padding: 2%;
+}
+.long-footer p:first-of-type {
+    font-weight: 600;
+}
+.long-footer p {
+    font-size: small;
+}
+.long-footer a {
+    color: black;
+    text-decoration: none;
+}
+.long-footer a:hover {
+    color: #495E57;
+}
 .footer {
     bottom: 0;
     position: relative;
     text-align: center;
     width: 100%;
-    background-color: beige;
+    background-color: rgb(223, 223, 94);
     padding: 10px;
     font-weight: 600;
 }
