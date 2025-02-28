@@ -71,8 +71,9 @@ function BookingForm({ availableTimes, dispatch, reservations, onReserve, submit
             onChange={handleDateChange}
             required
             aria-label="Reservation Date"
+            
           />
-
+        {!chosenDate && <p className="error-msg">You must choose the date.</p>}
           {/* Time Select */}
           <label htmlFor="res-time">Choose Time</label>
           <select
@@ -87,6 +88,7 @@ function BookingForm({ availableTimes, dispatch, reservations, onReserve, submit
               <option
                 key={index}
                 value={time}
+                required
                 disabled={isTimeReserved(chosenDate, time)}
                 aria-label={isTimeReserved(chosenDate, time) ? `${time} Reserved` : `${time} Available`}
               >
@@ -94,6 +96,7 @@ function BookingForm({ availableTimes, dispatch, reservations, onReserve, submit
               </option>
             ))}
           </select>
+          {!selectedTime && <p className="error-msg">You must choose your preferred time.</p>}
 
           {/* Guest Number Input */}
           <label htmlFor="guests">Number of Guests</label>
@@ -107,7 +110,7 @@ function BookingForm({ availableTimes, dispatch, reservations, onReserve, submit
             required
             aria-label="Number of guests"
           />
-
+        {numberGuest <= 0 && <p className="error-msg">Guests must be at least 1.</p>}
           {/* Occasion Select */}
           <label htmlFor="occasion">Occasion</label>
           <select
@@ -121,7 +124,7 @@ function BookingForm({ availableTimes, dispatch, reservations, onReserve, submit
             <option value="Birthday">Birthday</option>
             <option value="Anniversary">Anniversary</option>
           </select>
-        
+          {!occasion && <p className="error-msg">You must choose the occasion.</p>}
 
         {/* Submit Button */}
         <button

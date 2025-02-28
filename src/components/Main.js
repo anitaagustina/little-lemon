@@ -27,7 +27,7 @@ function Main() {
             </div>
             <section className="specials-gallery">
                 <section className="menu-gallery">
-                    <img src={Specials} alt="Banner Little Lemon"/>
+                    <img src={Specials} alt="Special Menu Little Lemon"/>
                     <div className="right-content">
                         <p>Greek Salad </p>
                         <p>$12.90</p>
@@ -36,7 +36,7 @@ function Main() {
                     <button className="main-btn menu-gallery">Order a delivery</button>
                 </section>
                 <section className="menu-gallery">
-                    <img src={Specials} alt="Banner Little Lemon"/>
+                    <img src={Specials} alt="Special Menu Little Lemon"/>
                     <div className="right-content">
                         <p>Greek Salad </p>
                         <p>$12.90</p>
@@ -45,7 +45,7 @@ function Main() {
                     <button className="main-btn menu-gallery">Order a delivery</button>
                 </section>
                 <section className="menu-gallery">
-                    <img src={Specials} alt="Banner Little Lemon"/>
+                    <img src={Specials} alt="Special Menu Little Lemon"/>
                     <div className="right-content">
                         <p>Greek Salad </p>
                         <p>$12.90</p>
@@ -59,24 +59,24 @@ function Main() {
         <p>Testimonials</p>
             <section className="testimonials">
                 <section className="testimonials-single">
-                    <p>Name</p>
+                    <p>Clara</p>
                     <img src={Avatar} alt="Testimonials" width="100"/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem urna.</p>
+                    <p>"I really love their Greek Salad! It's my go-to meal everyday!"</p>
                 </section>
                 <section className="testimonials-single">
-                    <p>Name</p>
+                    <p>Clara</p>
                     <img src={Avatar} alt="Testimonials" width="100"/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem urna.</p>
+                    <p>"I really love their Greek Salad! It's my go-to meal everyday!"</p>
                 </section>
                 <section className="testimonials-single">
-                    <p>Name</p>
+                    <p>Clara</p>
                     <img src={Avatar} alt="Testimonials" width="100"/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem urna</p>
+                    <p>"I really love their Greek Salad! It's my go-to meal everyday!"</p>
                 </section>
                 <section className="testimonials-single">
-                    <p>Name</p>
+                    <p>Clara</p>
                     <img src={Avatar} alt="Testimonials" width="100"/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem urna.</p>
+                    <p>"I really love their Greek Salad! It's my go-to meal everyday!"</p>
                 </section>
             </section>
         </section>

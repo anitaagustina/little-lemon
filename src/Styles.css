@@ -14,6 +14,14 @@
     padding: 10px 20px;
 
 }
+.menu li > a {
+    text-decoration: none;
+    color: black;
+}
+.menu li a:hover {
+    background-color: rgb(247, 247, 24);
+    border-bottom: 1px dotted black;
+}
 .container {
     display: flex;
     flex-flow: row wrap;
@@ -40,25 +48,36 @@
     background-color: black;
     color: white;
     cursor: pointer;
+
+}
+.main-btn a {
+    text-decoration: none;
+    color: white;
 }
 .main-btn:link {
     background-color: black;
     color: white;
+
 }
-.main-btn:hover {
+.main-btn:hover, .main-btn:hover a {
     background-color: rgb(247, 247, 24);
     color: black;
 }
 .specials-gallery {
     width: 100%;
     display: flex;
-    gap: 10px;
+   
+    
 }
 .specials-top {
     display: flex;
     justify-content: space-between;
     padding-top: 2%;
     padding-left: 2%;
+}
+.specials-top button {
+    height: 20%;
+    align-self: center;
 }
 .menu-gallery {
     border: 1px solid black;
@@ -92,16 +111,35 @@
 .testimonials {
     display: flex;
     justify-content: space-evenly;
+    
     height: fit-content;
     background-color: #495E57;
 }
 .testimonials-single {
     border: 1px solid black;
-    padding: 2%;
+    padding: 1%;
     width: auto;
-    margin: 1%;
+    margin-left: auto;
+    margin-right: auto;
     color: black;
     background-color: white;
+    text-align: center;
+    border-radius: 30px;
+}
+.testimonials-single p:first-of-type {
+    font-weight: 600;
+} 
+.testimonials-single img {
+    border-radius: 50px;
+
+}
+.testimonials-single:hover {
+    width: 110%;
+    
+}
+.error-msg {
+    font-size: small;
+    color: red;
 }
 .table-reservations {
     margin: 2%;
@@ -144,4 +182,5 @@
     width: 100%;
     background-color: beige;
     padding: 10px;
+    font-weight: 600;
 }
