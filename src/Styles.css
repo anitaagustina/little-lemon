@@ -208,3 +208,32 @@
     padding: 10px;
     font-weight: 600;
 }
+/* 📱 Responsive: Mobile Adjustments */
+@media (max-width: 768px) {
+    .banner,
+    .about {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .banner-left, .banner-right,
+    .about .banner-left, .about .banner-right {
+      width: 100%;
+    }
+  
+    .specials-top {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .specials-gallery,
+    .testimonials {
+      flex-direction: column;
+    }
+
+    .menu-gallery,
+    .testimonials-single {
+      width: 100%;
+      max-width: none;
+    }
+}
